@@ -10,6 +10,18 @@ This buildpack supports running Django and Flask apps.
 
 Official buildpack documentation can be found at [python buildpack docs](http://docs.cloudfoundry.org/buildpacks/python/index.html).
 
+### Get build requirements
+
+1.  /usr/local/go/bin/go get github.com/cloudfoundry/libbuildpack
+
+2.  cd ~/go/src/github.com/cloudfoundry/libbuildpack && GO111MODULE=on /usr/local/go/bin/go mod download
+
+3.  cd packager/buildpack-packager &&  GO111MODULE=on /usr/local/go/bin/go install
+
+4.  Installed:
+
+/Users/baaron@us.ibm.com/go/bin/buildpack-packager
+
 ### Building the Buildpack
 
 To build this buildpack, run the following commands from the buildpack's directory:
